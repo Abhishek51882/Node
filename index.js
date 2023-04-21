@@ -7,6 +7,7 @@ const app=express();
 app.use(expressLayouts);
 app.set('view engine', 'ejs');
 app.set('views','./views');
+app.use(express.urlencoded());
 
 app.listen(port,(err)=>{
     if(err){
