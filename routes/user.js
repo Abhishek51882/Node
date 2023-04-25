@@ -58,7 +58,7 @@ fun().then((u)=>{
         if(req.body.password!=u.password){
             return res.redirect('back');
         }else{
-            // res.cookies('userId',u._id);
+             res.cookie('userId',u._id);
             return res.render('home');
         }
     }
